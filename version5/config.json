@@ -1,6 +1,6 @@
 {
   "data_source": {
-    "name": "open_weather_json"
+    "name": "urban_climate_csv"
   },
   "plot": {
     "name": "plotly_plot"

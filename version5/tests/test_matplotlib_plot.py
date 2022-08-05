@@ -3,7 +3,7 @@ from unittest.mock import MagicMock
 
 import matplotlib.pyplot
 
-from app.matplotlib_plot import Plot
+from plotting.matplotlib_plot import Plot
 
 
 def test_draw(monkeypatch):

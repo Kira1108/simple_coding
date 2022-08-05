@@ -1,10 +1,13 @@
 import datetime
 import json
+from reader.base import DataReader
+from plotting.base import DataPlotting
+import importlib
 
 
 class App:
 
-    def __init__(self, data_source, plot):
+    def __init__(self, data_source:DataReader, plot:DataPlotting):
         self.data_source = data_source
         self.plot = plot
 
@@ -12,11 +15,10 @@ class App:
     def configure(cls, filename):
         with open(filename) as file:
             config = json.load(file)
-
-        data_source = __import__(config['data_source']['name']).DataSource()
-
-        plot = __import__(config['plot']['name']).Plot()
-
+            
+            
+        data_source = importlib.import_module(f"reader.{config['data_source']['name']}").DataSource()
+        plot = importlib.import_module(f"plotting.{config['plot']['name']}").Plot()
         return cls(data_source, plot)
 
 

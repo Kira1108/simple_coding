@@ -3,7 +3,7 @@ from unittest.mock import MagicMock
 
 import plotly.graph_objects
 
-from app.plotly_plot import Plot
+from plotting.plotly_plot import Plot
 
 
 def test_draw(monkeypatch):

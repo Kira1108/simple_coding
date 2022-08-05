@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  pypi-server:
+    image: pypiserver/pypiserver:latest
+    ports:
+      - 8080:8080
+    volumes:
+      - type: volume
+        source: pypi-server
+        target: /data/packages
+    environment:
+      - FALLBACK_URL=https://pypi.tuna.tsinghua.edu.cn/simple/
+    command: pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+      
+    restart: always
+
+volumes:
+  pypi-server:

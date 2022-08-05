@@ -80,3 +80,19 @@ activate....
 pip install -r requirements.txt
 run your program
 ```
+
+## Inconvinence of virtualenv
+No control over OS level dependencies.
+install pymc3 - require gcc
+install tensorflow-gpu - require cuda, cudnn, nvidia-cuda-toolkit, and all version properly orginized.
+plot a <V,E> graph - require graphviz...
+```bash
+sudo apt install graphgiz
+sudo apt-get install gcc
+export envrionment_varialble
+export envrionment_varialble
+export envrionment_varialble
+....
+....
+```
+*Still hard to reproduce you environment*

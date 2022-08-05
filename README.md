@@ -5,7 +5,7 @@ This repository contains progressivly optimized projects, which will help you to
 
 ## Steps
 ```bash
-cp /path/to/simple_coding
+cd /path/to/simple_coding
 
 # setup a virtual environment
 python -m venv venv

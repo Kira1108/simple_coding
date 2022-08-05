@@ -34,3 +34,49 @@ pip install -r requirements.txt
 # on you terminal you should see something like 
 (venv) PS C:\Users\somepath\simple_coding>....
 ```
+
+
+## VirtualEnv - Slim version of a python version
+```bash
+venv
+├── Include
+├── Lib
+│   └── site-packages
+├── Scripts
+│   ├── Activate.ps1
+│   ├── activate
+│   ├── activate.bat
+│   ├── deactivate.bat
+│   ├── easy_install-3.8.exe
+│   ├── easy_install.exe
+│   ├── f2py.exe
+│   ├── fonttools.exe
+│   ├── pip.exe                  # you use this pip to install things
+│   ├── pip3.8.exe
+│   ├── pip3.exe
+│   ├── py.test.exe
+│   ├── pyftmerge.exe
+│   ├── pyftsubset.exe
+│   ├── pytest.exe
+│   ├── python.exe              # you use this python to run your program
+│   ├── pythonw.exe
+│   └── ttx.exe
+├── etc
+│   └── jupyter
+├── pyvenv.cfg
+└── share
+    ├── jupyter
+    └── man
+```
+
+Ok, that's everything required for virtualenv.
+
+
+## Benefits of virtualenv
+Others can reproduce your environment and dependecies by simply running
+```bash
+python -m venv venv
+activate....
+pip install -r requirements.txt
+run your program
+```
